@@ -1,0 +1,35 @@
+:root {
+    /* Fonts */
+    --main-font: 'Roboto', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-black: 900;
+
+    /* Text color */
+    --main-txt-cl: #212121;
+    --accent-cl: #2196f3;
+    --grey-txt-cl: #757575;
+    --white-txt-cl: #fff;
+    --black-txt-cl: #000;
+
+    /* Background color */
+    --dark-bg-cl: #2f303a;
+    --grey-bg-cl: #f5f4fa;
+    --white-bg-cl: #fff;
+
+    /* Icons color */
+    --icon-primary-cl: #AFB1B8;
+
+    /* Others */
+    --header-line-cl: #ececec;
+    --btn-active-cl: #188CE8;
+
+    /* Aniamtion and transition */
+    --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Grid flex set - flex-basis*/
+    --items: 3;
+    --indent: 30px;
+}

@@ -1,0 +1,58 @@
+/**
+  |============================
+  | Footer page
+  |============================
+*/
+
+.page-footer {
+  background-color: var(--dark-bg-cl);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.page-footer__content {
+  display: flex;
+  align-items: baseline;
+}
+
+.page-footer__contacts {
+  margin-right: 70px;
+}
+
+.page-footer__logo {
+  display: block;
+  margin-bottom: 20px;
+  margin-right: 0;
+}
+
+/* Address in page-footer */
+
+.address {
+  text-decoration: none;
+  font-style: normal;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--white-txt-cl);
+}
+
+.address__text {
+  margin-bottom: 9px;
+}
+
+.address__item:first-child {
+  margin-bottom: 9px;
+}
+
+.address__link {
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: color var(--anim);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+}

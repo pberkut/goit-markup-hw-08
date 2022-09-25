@@ -1,0 +1,33 @@
+.about {
+  padding-top: 0px;
+
+  &__list {
+    --items: 3;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 70px;
+
+    font-weight: var(--font-weight-bold);
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-txt-cl);
+
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+}

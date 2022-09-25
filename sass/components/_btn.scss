@@ -1,0 +1,120 @@
+// Buttons
+.btn {
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: inherit;
+  font-weight: var(--font-weight-bold);
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  color: var(--white-txt-cl);
+  background-color: var(--accent-cl);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-cl);
+  border-radius: 4px;
+  border: none;
+
+  cursor: pointer;
+
+  transition: background-color var(--anim);
+
+  &:hover {
+    background: var(--btn-active-cl);
+  }
+}
+
+.hero__btn {
+  padding-top: 10px;
+  padding-right: 32px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+}
+
+.subscribe__btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding-top: 10px;
+  padding-right: 28px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+}
+
+.register-form__btn {
+  padding-top: 10px;
+  padding-right: 52px;
+  padding-bottom: 10px;
+  padding-left: 52px;
+}
+
+// Filter button
+
+.filter__btn {
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+
+  font-weight: var(--font-weight-medium);
+  line-height: calc(26 / 16);
+  letter-spacing: 0.03em;
+  color: var(--main-txt-cl);
+  background-color: var(--grey-bg-cl);
+
+  transition: color var(--anim), background-color var(--anim), box-shadow var(--anim);
+
+  &:hover,
+  &:focus {
+    color: var(--white-txt-cl);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    background-color: var(--accent-cl);
+  }
+
+  .filter__item:first-child & {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+.filter {
+  --items: 5;
+  --indent: 8px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--white-bg-cl);
+
+  cursor: pointer;
+}
+
+.modal__close-icon {
+  .modal__close-btn:hover > &,
+  .modal__close-btn:focus > & {
+    fill: var(--accent-cl);
+  }
+
+  .modal__close-btn > & {
+    transition: fill var(--anim);
+  }
+}
