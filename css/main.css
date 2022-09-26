@@ -79,24 +79,30 @@ body {
 }
 
 .container {
-  width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-}
-
-.title {
-  margin-bottom: 50px;
-  font-weight: var(--font-weight-bold);
-  font-size: 36px;
-  line-height: 1.1666666667;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--main-txt-cl);
 }
 
 /* Grid flex set */
@@ -112,6 +118,33 @@ body {
 .grid-set-item {
   -ms-flex-preferred-size: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
       flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
+.logo {
+  margin-right: 93px;
+  font-family: var(--secondary-font);
+  font-weight: var(--font-weight-bold);
+  font-size: 26px;
+  line-height: 1.1923076923;
+  letter-spacing: 0.03em;
+  color: var(--accent-cl);
+}
+
+.logo__label--dark {
+  color: var(--black-txt-cl);
+}
+.logo__label--light {
+  color: var(--white-txt-cl);
+}
+
+.title {
+  margin-bottom: 50px;
+  font-weight: var(--font-weight-bold);
+  font-size: 36px;
+  line-height: 1.1666666667;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-txt-cl);
 }
 
 .btn {
@@ -229,23 +262,6 @@ body {
 .modal__close-btn > .modal__close-icon {
   -webkit-transition: fill var(--anim);
   transition: fill var(--anim);
-}
-
-.logo {
-  margin-right: 93px;
-  font-family: var(--secondary-font);
-  font-weight: var(--font-weight-bold);
-  font-size: 26px;
-  line-height: 1.1923076923;
-  letter-spacing: 0.03em;
-  color: var(--accent-cl);
-}
-
-.logo__label--dark {
-  color: var(--black-txt-cl);
-}
-.logo__label--light {
-  color: var(--white-txt-cl);
 }
 
 /* Socials list */
@@ -588,7 +604,7 @@ body {
   border-bottom: 1px solid var(--header-line-cl);
 }
 
-.page-header > .container {
+.page-header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -929,7 +945,7 @@ body {
   padding-bottom: 60px;
 }
 
-.page-footer__content {
+.page-footer__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
