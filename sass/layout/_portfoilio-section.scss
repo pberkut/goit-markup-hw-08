@@ -5,22 +5,25 @@
 */
 
 .portfolio {
-  --items: 1;
+  display: block;
 
   @media screen and (min-width: 768px) {
-    & {
-      --items: 2;
-    }
+    display: flex;
+    --items: 2;
   }
 
   @media screen and (min-width: 1200px) {
-    & {
-      --items: 3;
-    }
+    --items: 3;
   }
 }
 
 .portfolio-card {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
   &__thumb {
     position: relative;
     overflow: hidden;

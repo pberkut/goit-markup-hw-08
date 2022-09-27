@@ -5,10 +5,13 @@
 */
 
 .page-footer {
-  text-align: center;
   background-color: var(--dark-bg-cl);
   padding-top: 60px;
   padding-bottom: 60px;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 
   &__contacts {
     margin-bottom: 60px;
@@ -21,11 +24,6 @@
   }
 
   @media screen and (min-width: 768px) {
-    & {
-      padding-left: 76px;
-      padding-right: 89px;
-    }
-
     &__container {
       display: flex;
       flex-wrap: wrap;

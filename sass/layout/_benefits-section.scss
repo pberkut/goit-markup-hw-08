@@ -5,13 +5,31 @@
 */
 .benefits {
   &__list {
-    --items: 1;
+    display: block;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      --items: 2;
+    }
+
+    @media screen and (min-width: 1200px) {
+      --items: 4;
+    }
+  }
+
+  &__item {
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__wrap {
     display: flex;
     align-items: center;
     justify-content: center;
+
     height: 120px;
     margin-bottom: 30px;
 
@@ -21,12 +39,15 @@
   &__subtitle {
     margin-bottom: 10px;
 
-    text-align: center;
     font-weight: var(--font-weight-bold);
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   &__desc {
@@ -34,21 +55,5 @@
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     color: var(--grey-txt-cl);
-  }
-
-  @media screen and (min-width: 768px) {
-    &__list {
-      --items: 2;
-    }
-
-    &__subtitle {
-      text-align: left;
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    &__list {
-      --items: 4;
-    }
   }
 }

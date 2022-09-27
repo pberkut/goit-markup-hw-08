@@ -5,9 +5,11 @@
 */
 
 .about {
-  display: none;
-
   padding-top: 0px;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 
   &__list {
     --items: 3;
@@ -37,9 +39,5 @@
     color: var(--white-txt-cl);
 
     background-color: rgba(47, 48, 58, 0.8);
-  }
-
-  @media screen and (min-width: 1200px) {
-    display: block;
   }
 }
