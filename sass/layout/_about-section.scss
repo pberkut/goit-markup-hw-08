@@ -1,4 +1,12 @@
+/**
+  |============================
+  | About sextion
+  |============================
+*/
+
 .about {
+  display: none;
+
   padding-top: 0px;
 
   &__list {
@@ -29,5 +37,9 @@
     color: var(--white-txt-cl);
 
     background-color: rgba(47, 48, 58, 0.8);
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: block;
   }
 }

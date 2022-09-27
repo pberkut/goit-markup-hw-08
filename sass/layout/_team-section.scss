@@ -7,7 +7,7 @@
 .team {
   background-color: var(--grey-bg-cl);
   &__list {
-    --items: 4;
+    --items: 1;
   }
 
   &__item {
@@ -15,14 +15,26 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
   }
+
+  @media screen and (min-width: 768px) {
+    &__list {
+      --items: 2;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__list {
+      --items: 4;
+    }
+  }
 }
 
 .team-card {
   &__meta {
     padding-top: 30px;
-    padding-bottom: 30px;
-    padding-right: 32px;
-    padding-left: 32px;
+    padding-right: 122px;
+    padding-bottom: 24px;
+    padding-left: 122px;
   }
 
   &__name {
@@ -35,10 +47,28 @@
   }
 
   &__position {
-    margin-bottom: 16px;
     line-height: calc(19 / 16);
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--grey-txt-cl);
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__meta {
+      padding-top: 30px;
+      padding-right: 74px;
+      padding-bottom: 24px;
+      padding-left: 74px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__meta {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-right: 32px;
+      padding-left: 32px;
+    }
   }
 }

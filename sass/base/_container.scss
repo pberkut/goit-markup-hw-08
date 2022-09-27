@@ -1,19 +1,33 @@
 .container {
-  // width: 1200px;
+  // Breakpoints:
+  // Mobile = 480px
+  // Tablet = 768px
+  // Desktop = 1200px
+
+  // size mobile container
+
+  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 
+  // Debug styles - Temp
+  outline: 2px solid red;
+  outline-offset: -2px;
+
+  // Mobile size - Temp
   @media screen and (min-width: 480px) {
-    width: 480px;
+    max-width: 480px;
   }
 
+  // Size tablet container
   @media screen and (min-width: 768px) {
-    width: 768px;
+    max-width: 768px;
   }
 
+  // Size desktop container
   @media screen and (min-width: 1200px) {
-    width: 1200px;
+    max-width: 1200px;
   }
 }

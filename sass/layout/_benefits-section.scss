@@ -5,7 +5,7 @@
 */
 .benefits {
   &__list {
-    --items: 4;
+    --items: 1;
   }
 
   &__wrap {
@@ -21,6 +21,7 @@
   &__subtitle {
     margin-bottom: 10px;
 
+    text-align: center;
     font-weight: var(--font-weight-bold);
     font-size: 14px;
     line-height: calc(16 / 14);
@@ -33,5 +34,21 @@
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
     color: var(--grey-txt-cl);
+  }
+
+  @media screen and (min-width: 768px) {
+    &__list {
+      --items: 2;
+    }
+
+    &__subtitle {
+      text-align: left;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__list {
+      --items: 4;
+    }
   }
 }

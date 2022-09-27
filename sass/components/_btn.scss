@@ -29,9 +29,15 @@
 
 .hero__btn {
   padding-top: 10px;
-  padding-right: 32px;
+  padding-right: 24px;
   padding-bottom: 10px;
-  padding-left: 32px;
+  padding-left: 24px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 10px;
+    padding-right: 32px;
+    padding-bottom: 10px;
+    padding-left: 32px;
+  }
 }
 
 .subscribe__btn {
@@ -82,10 +88,23 @@
 }
 
 .filter {
-  --items: 5;
+  // --items: 3;
   --indent: 8px;
-  justify-content: center;
-  margin-bottom: 50px;
+  row-gap: 15px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    & {
+      // --items: 5;
+      // --indent: 8px;
+
+      margin-bottom: 50px;
+    }
+  }
 }
 
 .modal__close-btn {

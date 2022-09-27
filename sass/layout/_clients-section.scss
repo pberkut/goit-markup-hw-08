@@ -5,7 +5,7 @@
 */
 .clients {
   &__list {
-    --items: 6;
+    --items: 2;
   }
 
   &__link {
@@ -33,5 +33,17 @@
     fill: currentColor;
 
     transition: color var(--anim);
+  }
+
+  @media screen and (min-width: 768px) {
+    &__list {
+      --items: 3;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__list {
+      --items: 6;
+    }
   }
 }

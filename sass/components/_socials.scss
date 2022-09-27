@@ -1,4 +1,9 @@
 /* Socials list */
+.socials {
+  display: flex;
+  justify-content: center;
+}
+
 .socials__list {
   --items: 4;
   --indent: 10px;
