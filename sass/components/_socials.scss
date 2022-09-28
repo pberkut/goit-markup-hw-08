@@ -9,14 +9,21 @@
   --indent: 10px;
 }
 
+.socials__item {
+  @media screen and (max-width: 767px) {
+    flex-basis: 0;
+  }
+}
+
 .socials__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 
-  width: 44px;
-  height: 44px;
-
+  // width: 44px;
+  // height: 44px;
+  padding: 12px;
   border-radius: 50%;
   color: var(--icon-primary-cl);
 
@@ -37,6 +44,7 @@
 }
 
 .socials__icon {
+  display: block;
   fill: currentColor;
   transition: fill var(--anim);
 }

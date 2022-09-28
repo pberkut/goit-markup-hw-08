@@ -123,6 +123,9 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: var(--indent);
 }
 
@@ -141,16 +144,10 @@ body {
   letter-spacing: 0.03em;
   color: var(--accent-cl);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1199px) {
   .logo {
     padding-top: 26px;
     padding-bottom: 26px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .logo {
-    padding-top: 24px;
-    padding-bottom: 25px;
   }
 }
 .logo__label--dark {
@@ -332,18 +329,16 @@ body {
   --indent: 10px;
 }
 
+@media screen and (max-width: 767px) {
+  .socials__item {
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+  }
+}
+
 .socials__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 44px;
-  height: 44px;
+  display: block;
+  padding: 12px;
   border-radius: 50%;
   color: var(--icon-primary-cl);
   -webkit-transition: background-color var(--anim);
@@ -361,6 +356,7 @@ body {
 }
 
 .socials__icon {
+  display: block;
   fill: currentColor;
   -webkit-transition: fill var(--anim);
   transition: fill var(--anim);
@@ -601,16 +597,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (min-width: 768px) {
-  .page-header__logo {
-    margin-right: 88px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .page-header__logo {
-    margin-right: 92px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .page-header__contacts {
     display: -webkit-box;
@@ -619,14 +605,10 @@ body {
     gap: 50px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .page-header__logo {
-    margin-right: 93px;
-  }
-}
 
 .main-nav {
   margin-right: auto;
+  margin-left: auto;
 }
 @media screen and (max-width: 767px) {
   .main-nav {
@@ -736,7 +718,6 @@ body {
 }
 .hero__title {
   max-width: 360px;
-  height: 84px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -755,7 +736,6 @@ body {
   }
   .hero__title {
     max-width: 696px;
-    height: 120px;
     font-size: 44px;
     line-height: 1.3636363636;
   }
@@ -902,9 +882,7 @@ body {
 
 .team-card__meta {
   padding-top: 30px;
-  padding-right: 122px;
   padding-bottom: 24px;
-  padding-left: 122px;
 }
 @media screen and (min-width: 768px) {
   .team-card__meta {
