@@ -8,15 +8,38 @@
   //   margin-top: 15px;
   //   margin-bottom: 15px;
   // }
+  @media screen and (max-width: 767px) {
+    position: relative;
+  }
 
   border-bottom: 1px solid var(--header-line-cl);
 
   &__container {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 767px) {
+      justify-content: space-between;
+    }
   }
 
   &__logo {
+  }
+
+  &__menu-btn {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    @media screen and (min-width: 768px) {
+      // position: absolute;
+      display: none;
+    }
+  }
+
+  &__menu-group {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 
   &__contacts {
