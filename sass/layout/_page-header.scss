@@ -82,13 +82,6 @@
   letter-spacing: 0.02em;
   color: var(--main-txt-cl);
 
-  transition: color var(--anim);
-
-  &:hover,
-  &:focus {
-    color: var(--accent-cl);
-  }
-
   &--active::after {
     content: '';
     display: block;
@@ -129,18 +122,11 @@
   align-items: center;
   gap: 10px;
 
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--grey-txt-cl);
-
-  transition: color var(--anim);
-
-  &:hover,
-  &:focus {
-    color: var(--accent-cl);
-  }
 
   @media screen and (min-width: 1200px) {
     padding-top: 32px;

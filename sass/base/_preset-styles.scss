@@ -21,6 +21,12 @@ img {
 .link {
   text-decoration: none;
   color: var(--main-txt-cl);
+  transition: color var(--anim);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
 }
 
 .list {
