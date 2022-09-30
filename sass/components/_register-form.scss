@@ -145,11 +145,16 @@
 }
 
 .checkbox__desc {
-  font-size: 14px;
-  line-height: calc(24 / 14);
+  font-size: 12px;
+  line-height: calc(14 / 12);
   letter-spacing: 0.03em;
   color: var(--grey-txt-cl);
   user-select: none;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
 }
 
 .checkbox__link {

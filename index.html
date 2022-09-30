@@ -26,46 +26,45 @@
   <header class="page-header">
     <div class="container page-header__container">
       <a class="logo page-header__logo link" href="./index.html">Web<span class="logo__label--dark">Studio</span></a>
-      <button class="icon-btn page-header__menu-btn">
+
+      <button class="menu-btn page-header__menu-btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg width="40" height="40">
-          <use href="./images/icons.svg#icon-close"></use>
           <use href="./images/icons.svg#icon-menu"></use>
         </svg>
-
       </button>
-      <div class="page-header__menu-group">
-        <nav class="main-nav">
-          <ul class="main-nav__list list">
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--active link" href="./index.html">Студія</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link link" href="./portfolio.html">Портфоліо</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link link" href="">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="contacts page-header__contacts list">
-          <li class="contacts__item">
-            <a class="contacts__link link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon" width="16" height="12">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
+
+      <nav class="main-nav">
+        <ul class="main-nav__list list">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active link" href="./index.html">Студія</a>
           </li>
-          <li class="contacts__item">
-            <a class="contacts__link link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10" height="16">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
+          <li class="main-nav__item">
+            <a class="main-nav__link link" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link link" href="">Контакти</a>
           </li>
         </ul>
-      </div>
+      </nav>
+      <ul class="contacts page-header__contacts list">
+        <li class="contacts__item">
+          <a class="contacts__link link" href="mailto:info@devstudio.com">
+            <svg class="contacts__icon" width="16" height="12">
+              <use href="./images/icons.svg#envelope"></use>
+            </svg>
+            info@devstudio.com
+          </a>
+        </li>
+        <li class="contacts__item">
+          <a class="contacts__link link" href="tel:+380961111111">
+            <svg class="contacts__icon" width="10" height="16">
+              <use href="./images/icons.svg#smartphone"></use>
+            </svg>
+            +38 096 111 11 11
+          </a>
+        </li>
+      </ul>
+
     </div>
   </header>
   <!-- Main page -->
@@ -354,7 +353,7 @@
   <!-- Footer page -->
   <footer class="page-footer">
     <div class="container page-footer__container">
-      <div class="contacts page-footer__contacts">
+      <div class=" page-footer__contacts">
         <a class="logo page-footer__logo link" href="./index.html">Web<span class="logo__label--light">Studio</span></a>
         <address class="address">
           <p class="address__text">м. Київ, пр-т Лесі Українки, 26</p>
@@ -472,7 +471,27 @@
       </form>
     </div>
   </div>
-  <!-- JS modal -->
+  <!-- Mobile menu -->
+  <div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-btn menu-toggle js-close-menu">
+      <svg width="40" height="40">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <ul class="mobile-menu">
+      <li><a href="" class="link">About</a></li>
+      <li><a href="" class="link">Products</a></li>
+      <li><a href="" class="link">Contacts</a></li>
+      <li><a href="" class="link">Career</a></li>
+    </ul>
+  </div>
+  <!-- JS mobile menu -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"></script>
+  <script defer src="js/mobile-menu.js"></script>
+  <!-- JSt modal window -->
   <script src="./js/modal.js"></script>
 </body>
 
