@@ -20,6 +20,8 @@
 }
 
 .portfolio-card {
+  display: flex;
+
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -32,7 +34,14 @@
   }
 
   &__desc {
-    padding: 63px 24px;
+    display: flex;
+    align-items: center;
+
+    height: 294px;
+
+    padding-right: 24px;
+    padding-left: 24px;
+
     font-size: 18px;
     line-height: calc(28 / 18);
     letter-spacing: 0.03em;
@@ -41,6 +50,7 @@
   }
 
   &__meta {
+    flex-grow: 1;
     border: 1px solid #eeeeee;
     padding: 20px 24px;
   }
@@ -61,7 +71,8 @@
   }
 
   &__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
 
     text-decoration: none;
     color: var(--main-txt-cl);

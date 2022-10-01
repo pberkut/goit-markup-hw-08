@@ -92,11 +92,6 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-width: 480px) {
-  .container {
-    max-width: 480px;
-  }
-}
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
@@ -843,7 +838,7 @@ body {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 116px;
+  padding-top: 118px;
   padding-bottom: 118px;
   text-align: center;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-img_sm-@1x.jpg);
@@ -1153,6 +1148,11 @@ body {
   }
 }
 
+.portfolio-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 @media screen and (max-width: 767px) {
   .portfolio-card:not(:last-child) {
     margin-bottom: 30px;
@@ -1163,7 +1163,15 @@ body {
   overflow: hidden;
 }
 .portfolio-card__desc {
-  padding: 63px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 294px;
+  padding-right: 24px;
+  padding-left: 24px;
   font-size: 18px;
   line-height: 1.5555555556;
   letter-spacing: 0.03em;
@@ -1171,6 +1179,9 @@ body {
   background-color: rgba(33, 150, 243, 0.9);
 }
 .portfolio-card__meta {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   border: 1px solid #eeeeee;
   padding: 20px 24px;
 }
@@ -1187,7 +1198,13 @@ body {
   color: var(--grey-txt-cl);
 }
 .portfolio-card__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-decoration: none;
   color: var(--main-txt-cl);
   -webkit-transition: -webkit-box-shadow var(--anim);
