@@ -91,8 +91,6 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -235,6 +233,12 @@ body {
   padding-right: 52px;
   padding-bottom: 10px;
   padding-left: 52px;
+}
+
+.filter {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .filter__btn {
