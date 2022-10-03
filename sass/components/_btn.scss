@@ -110,34 +110,3 @@
     }
   }
 }
-
-.modal__close-btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-
-  width: 30px;
-  height: 30px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 0;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  background-color: var(--white-bg-cl);
-
-  cursor: pointer;
-}
-
-.modal__close-icon {
-  .modal__close-btn:hover > &,
-  .modal__close-btn:focus > & {
-    fill: var(--accent-cl);
-  }
-
-  .modal__close-btn > & {
-    transition: fill var(--anim);
-  }
-}

@@ -12,6 +12,11 @@
   width: 100%;
   height: 100%;
 
+  padding-top: 94px;
+  padding-right: 15px;
+  padding-bottom: 94px;
+  padding-left: 15px;
+
   background-color: rgba(0, 0, 0, 0.2);
 
   transition: visibility var(--anim), opacity var(--anim);
@@ -24,12 +29,15 @@
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  @media screen and (min-width: 480px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    transform: translate(-50%, -50%) scale(1);
+  }
 
-  width: 450px;
+  position: relative;
   // height: 609px;
 
   padding: 40px;
@@ -37,7 +45,7 @@
   border-radius: 4px;
   background-color: var(--white-bg-cl);
 
-  transition: transform var(--anim);
+  // transition: transform var(--anim);
 
   @media screen and (min-width: 1200px) {
     & {
@@ -47,6 +55,37 @@
   }
 
   .backdrop.is-hidden & {
-    transform: translate(-50%, -50%) scale(0.7);
+    // transform: translate(-50%, -50%) scale(0.7);
+  }
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--white-bg-cl);
+
+  cursor: pointer;
+}
+
+.modal__close-icon {
+  .modal__close-btn:hover > &,
+  .modal__close-btn:focus > & {
+    fill: var(--accent-cl);
+  }
+
+  .modal__close-btn > & {
+    transition: fill var(--anim);
   }
 }
