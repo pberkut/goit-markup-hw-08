@@ -87,6 +87,10 @@
   color: var(--accent-cl);
 }
 
+.menu-contacts {
+  margin-bottom: 64px;
+}
+
 .menu-contacts__item {
   &:first-child {
     margin-bottom: 32px;
@@ -100,7 +104,6 @@
     }
   }
   &:last-child {
-    margin-bottom: 64px;
     & .menu-contacts__link {
       font-weight: var(--font-weight-medium);
       font-size: 24px;

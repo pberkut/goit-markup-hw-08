@@ -14,7 +14,9 @@
   }
 
   &__contacts {
-    margin-bottom: 60px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
   }
 
   &__logo {
@@ -79,7 +81,9 @@
 
 /* Subscribe group in page-footer */
 .join {
-  margin-bottom: 60px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
 
   &__title {
     margin-bottom: 20px;
