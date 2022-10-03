@@ -9,6 +9,12 @@
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
+    const isModalOpen = refs.openModalBtn.getAttribute(`aria-expended`) === `true` || false;
+    refs.openModalBtn.setAttribute(`aria-expended`, !isModalOpen);
+
+    const scrollLockMethod = !isModalOpen ? `disableBodyScroll` : `enableBodyScroll`;
+    bodyScrollLock[scrollLockMethod](document.body);
+
     refs.modal.classList.toggle('is-hidden');
   }
 })();
