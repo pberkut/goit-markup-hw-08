@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The best WebStudio">
+  <meta name="description" content="The best of the best WebStudio">
   <title>WebStudio</title>
   <!-- Add fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,7 @@
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--active link" href="./portfolio.html">Портфоліо</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item scrollto">
             <a class="main-nav__link link" href="#footer">Контакти</a>
           </li>
         </ul>
@@ -464,6 +464,7 @@
       </div>
     </section>
   </main>
+
   <!-- Footer page -->
   <footer class="page-footer" id="footer">
     <div class="container page-footer__container">
@@ -531,6 +532,7 @@
       </form>
     </div>
   </footer>
+
   <!-- Mobile menu -->
   <div class="menu-container js-menu-container" id="mobile-menu">
     <button class="menu-btn menu-toggle js-close-menu">
@@ -546,8 +548,8 @@
       <li class="menu-nav__item">
         <a class="menu-nav__link menu-nav__link--active link" href="./portfolio.html">Портфоліо</a>
       </li>
-      <li class="menu-nav__item">
-        <a class="menu-nav__link link" href="">Контакти</a>
+      <li class="menu-nav__item scrollto">
+        <a class="menu-nav__link link" href="#footer">Контакти</a>
       </li>
     </ul>
 
@@ -562,7 +564,6 @@
           info@devstudio.com
         </a>
       </li>
-
     </ul>
 
     <ul class="menu-socials__list list">
@@ -594,6 +595,9 @@
     integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
     crossorigin="anonymous"></script>
   <script defer src="js/mobile-menu.js"></script>
+  <!-- JS smooth scroll  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="./js/smooth-scroll.js"></script>
 </body>
 
 </html>
