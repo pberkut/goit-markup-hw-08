@@ -7,6 +7,7 @@
 
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
+  refs.modal.addEventListener('click', onCloseModal);
 
   function toggleModal() {
     const isModalOpen = refs.openModalBtn.getAttribute(`aria-expended`) === `true` || false;
@@ -16,5 +17,11 @@
     bodyScrollLock[scrollLockMethod](document.body);
 
     refs.modal.classList.toggle('is-hidden');
+  }
+
+  function onCloseModal(event) {
+    if (event.currentTarget === event.target) {
+      refs.modal.classList.toggle('is-hidden');
+    }
   }
 })();
