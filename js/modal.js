@@ -7,7 +7,8 @@
 
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
-  refs.modal.addEventListener('click', onCloseModal);
+  refs.modal.addEventListener('click', onBackdropClick);
+  window.addEventListener('keydown', onKeypressCloseModal);
 
   function toggleModal() {
     const isModalOpen = refs.openModalBtn.getAttribute(`aria-expended`) === `true` || false;
@@ -19,8 +20,14 @@
     refs.modal.classList.toggle('is-hidden');
   }
 
-  function onCloseModal(event) {
+  function onBackdropClick(event) {
     if (event.currentTarget === event.target) {
+      refs.modal.classList.toggle('is-hidden');
+    }
+  }
+
+  function onKeypressCloseModal(event) {
+    if (event.key === 'Escape' && !refs.modal.classList.contains('is-hidden')) {
       refs.modal.classList.toggle('is-hidden');
     }
   }
