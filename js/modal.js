@@ -10,7 +10,7 @@
   refs.modal.addEventListener('click', onBackdropClick);
 
   function toggleModal() {
-    window.addEventListener('keydown', onEascapeKeyPressCloseModal);
+    window.addEventListener('keydown', onEascapeKeyPressCloseModal); // {once: true}
 
     // console.log(refs.modal.classList.contains('is-hidden'));
 
@@ -34,6 +34,7 @@
     if (event.code === 'Escape' && !refs.modal.classList.contains('is-hidden')) {
       // console.log(event);
       refs.modal.classList.toggle('is-hidden');
+      window.removeEventListener('keydown', onEascapeKeyPressCloseModal);
     }
   }
 })();
