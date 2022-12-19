@@ -16,7 +16,7 @@
   "liveSassCompile.settings.generateMap": true,
   "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
   // Live Server
-  "liveServer.settings.port": 888,
+  "liveServer.settings.port": 889,
   // Error Lens
   "errorLens.statusBarColorsEnabled": true,
   "errorLens.statusBarMessageEnabled": true,
@@ -24,5 +24,6 @@
   "errorLens.followCursor": "closestProblem",
   "errorLens.gutterIconsEnabled": true,
   "errorLens.scrollbarHackEnabled": true,
-  "errorLens.fontStyleItalic": true
+  "errorLens.fontStyleItalic": true,
+  "githubPullRequests.ignoredPullRequestBranches": ["main"]
 }

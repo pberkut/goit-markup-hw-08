@@ -32,9 +32,9 @@
   function onEascapeKeyPressCloseModal(event) {
     // console.log(event);
     if (event.code === 'Escape' && !refs.modal.classList.contains('is-hidden')) {
-      // console.log(event);
       refs.modal.classList.toggle('is-hidden');
       window.removeEventListener('keydown', onEascapeKeyPressCloseModal);
     }
+    // console.log(event);
   }
 })();
